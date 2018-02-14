@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.steli.hw_2_papoutsakis.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:orientation="horizontal">
+
+        <com.example.steli.hw_2_papoutsakis.FaceCanvas
+            android:id="@+id/FaceCanvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/RedTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="Red Component" />
+
+        <SeekBar
+            android:id="@+id/RedSeek"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/GreenTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="Green Component" />
+
+        <SeekBar
+            android:id="@+id/GreenSeek"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/BlueTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="Blue Component" />
+
+        <SeekBar
+            android:id="@+id/BlueSeek"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/RandomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="40dp"
+            android:layout_weight="0.15"
+            android:text="Random Face"
+            android:textSize="12sp" />
+
+        <!--
+        External Citation
+        Date: 10 Feb 2018
+        Problem: couldn't find a good way to group radio buttons
+        Resource:  https://developer.android.com/guide/topics/ui/controls/radiobutton.html
+        Solution: I learned about the RadioGroup class through this source
+
+
+        -->
+        <RadioGroup
+            android:id="@+id/RadioFeaturesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".5"
+            android:text="Features Picker">
+
+            <RadioButton
+                android:id="@+id/RadioEyesbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eyes" />
+
+            <RadioButton
+                android:id="@+id/RadioHairButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hair" />
+
+            <RadioButton
+                android:id="@+id/RadioSkinButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skin" />
+
+
+        </RadioGroup>
+
+
+        <Spinner
+            android:id="@+id/HairTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2" />
+    </LinearLayout>
+</android.widget.LinearLayout>
